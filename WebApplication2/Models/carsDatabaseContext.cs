@@ -25,8 +25,7 @@ namespace WebApplication2.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=tcp:mysqlserver699.database.windows.net,1433;Initial Catalog=carsDatabase;Persist Security Info=False;User ID=azureuser;Password=Abc131289!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+                optionsBuilder.UseSqlServer("CarsDbContext");
             }
         }
 
