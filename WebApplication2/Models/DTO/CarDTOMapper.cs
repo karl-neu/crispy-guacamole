@@ -9,6 +9,7 @@ namespace WebApplication2.Models.DTO
     {
         public static CarDTO MapToDTO(Car car)
         {
+            if(car==null)return null;
             return new CarDTO()
             {
                 Id = car.Id,

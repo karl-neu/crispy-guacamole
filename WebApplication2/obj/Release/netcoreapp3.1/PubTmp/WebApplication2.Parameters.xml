@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="WebApplication220201108064851" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\a\\source\\repos\\crispy-guacamole22\\WebApplication2\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="WebApplication2.Models.carsDatabaseContext" description="" value="Data Source=tcp:mysqlserver699.database.windows.net,1433;Initial Catalog=carsDatabase;User Id=azureuser@mysqlserver699;Password=Abc131289!" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\a\\source\\repos\\crispy-guacamole22\\WebApplication2\\obj\\Release\\netcoreapp3\.1\\PubTmp\\EFSQLScripts\\WebApplication2\.Models\.carsDatabaseContext\.sql$" />
+  </parameter>
+</parameters>

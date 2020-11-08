@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArUcn7x1kckCNJ8IscG7U/QAAAAACAAAAAAAQZgAAAAEAACAAAABZ7ELtHj5dtan9IGIheynSPDjdIQbgmsAY778mnRT/1QAAAAAOgAAAAAIAACAAAAB6AVGw9NjLVolQh4aSCl51vXXGuym5DHEg0ZtFyW/kZYAAAABY6cXoj2wwz3Oop2GcGEyQLbiV80WhpaYmodb591RWZ3Ch2iawW19V8ROLvqgy4C16h9ZTjm2AiDSvI9yez7SPhBrufcpK8O+O/wKU+VImuqV8LpAytBWIG7zHuUe90YMy7PJXMx5tt25k2mLMvwdgs7cfxJdMsPnfIzeyzhxFn0AAAAB90JOx2wIaxYJsvA0/wHe1T5Dk5L8tByvqii3hUTAOO2eKwaU9FIEiHacT57A2Oj4i1bP7Kto465lnRrM3ZEaR</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="CarsDbContext">
+      <Value>Data Source=tcp:mysqlserver699.database.windows.net,1433%3bInitial Catalog=carsDatabase%3bUser Id=azureuser%40mysqlserver699%3bPassword=Abc131289!</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="WebApplication2.Models.carsDatabaseContext">
+      <Value>Data Source=tcp:mysqlserver699.database.windows.net,1433%3bInitial Catalog=carsDatabase%3bUser Id=azureuser%40mysqlserver699%3bPassword=Abc131289!</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

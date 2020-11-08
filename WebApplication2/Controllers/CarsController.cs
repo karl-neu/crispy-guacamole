@@ -33,14 +33,18 @@ namespace WebApplication2.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Car>> GetCar(int id)
         {
-            var car = await _repository.GetDto(id);
-
-            if (car == null)
+            
+            try
             {
+                var car = await _repository.GetDto(id);
+                return Ok(car);
+            }
+            catch (Exception)
+            {
+
                 return NotFound();
             }
-
-            return Ok(car);
+            
         }
 
         // PUT: api/Cars/5
