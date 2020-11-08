@@ -5,6 +5,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WebApplication2.Models;
+using WebApplication2.Models.DataManager;
+using WebApplication2.Models.DTO;
+using WebApplication2.Models.Repository;
 
 namespace WebApplication2
 {
@@ -21,7 +24,11 @@ namespace WebApplication2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<carsDatabaseContext>(opts => opts.UseSqlServer(Configuration["ConnectionStrings:CarsDbContext"]));
-            services.AddControllers();
+            services.AddScoped<IDataRepository<Car, CarDTO>, CarDataManager>();
+
+            services.AddControllers().AddNewtonsoftJson(
+                    options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+                );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -13,6 +13,7 @@ namespace WebApplication2.Models
         public carsDatabaseContext(DbContextOptions<carsDatabaseContext> options)
             : base(options)
         {
+            ChangeTracker.LazyLoadingEnabled = false;
         }
 
         public virtual DbSet<Car> Car { get; set; }
@@ -25,7 +26,7 @@ namespace WebApplication2.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("CarsDbContext");
+                optionsBuilder.UseLazyLoadingProxies().UseSqlServer("Server = tcp:mysqlserver699.database.windows.net, 1433; Initial Catalog = carsDatabase; Persist Security Info = False; User ID = azureuser; Password = Abc131289!; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;");
             }
         }
 
